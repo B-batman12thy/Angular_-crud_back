@@ -5,30 +5,30 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.io.Serializable;
 @Getter
 @Data
 @Setter
 @NoArgsConstructor
-@Entity
+//@Entity
 public class User implements Serializable {
-    @Id
+  /* @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id")*/
     private Long id;
 
-    @Column(name ="nom", length = 30)
+    //@Column(name ="nom", length = 30)
     private String nom;
-    @Column(name="prenom",length = 30)
+   // @Column(name="prenom",length = 30)
     private String prenom;
-    @Column(name="email", length = 30)
+   // @Column(name="email", length = 30)
     private String email;
-    @Column(name="pays", length = 20)
+   // @Column(name="pays", length = 20)
     private String pays;
-    @Column(name="ville", length = 20)
+   // @Column(name="ville", length = 20)
     private String ville;
-    @Column (name="telephone", length = 20)
+   // @Column (name="telephone", length = 20)
     private String telephone;
 
 }
