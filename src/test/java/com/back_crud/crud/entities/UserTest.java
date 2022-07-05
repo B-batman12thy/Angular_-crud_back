@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 public class UserTest {
     User user;
     @BeforeEach
@@ -21,7 +23,7 @@ public class UserTest {
     @Test
     void testBuilder(){
         Assertions.assertAll(
-                ()-> Assertions.assertEquals(1,user.getId()),
+                ()-> Assertions.assertEquals(Optional.of(1),user.getId()),
                 ()->Assertions.assertEquals("thioub",user.getNom()),
                 ()->Assertions.assertEquals("djiby",user.getPrenom()),
                 ()->Assertions.assertEquals("thioubdjiby96@gmail.com",user.getEmail()),
